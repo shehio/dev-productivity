@@ -1,0 +1,11 @@
+#!/bin/bash
+
+make lint
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+  echo "Linting failed. Aborting push."
+  exit 1
+fi
+
+exit 0
